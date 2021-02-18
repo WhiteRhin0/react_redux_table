@@ -4,8 +4,9 @@ import './App.css';
 import { Table } from './components/Table';
 
 function App() {
-  const [row, setRow] = useState(0);
-  const [column, setColumn] = useState(0);
+  const [rows, setRows] = useState(0);
+  const [columns, setColumns] = useState(0);
+
 
   return (
     <div className="App">
@@ -16,8 +17,8 @@ function App() {
           <input
             type="number"
             name="column" 
-            value={column}
-            onChange={e => setColumn(e.target.value)}
+            value={columns}
+            onChange={e => setColumns(e.target.value)}
           />
         </label>
 
@@ -26,15 +27,15 @@ function App() {
           <input
             type="number"
             name="row"
-            value={row}
-            onChange={e => setRow(e.target.value)}
+            value={rows}
+            onChange={e => setRows(e.target.value)}
           />
         </label>
 
       </form>
       <Table 
-        row={row}
-        column={column}
+        rows={rows}
+        columns={columns}
       />
     </div>
   );

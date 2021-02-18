@@ -1,28 +1,22 @@
 import React from 'react';
 import './Table.css';
 import { createArrayOfRandom } from '../../createArrayofRandom';
+import { TableElements } from '../TableElements';
 
-export const Table = ({ row, column }) => {
-  let arrayOfrandom = createArrayOfRandom(row, column);
+export const Table = ({ rows, columns }) => {
+  let arrayOfrandom = createArrayOfRandom(rows, columns);
+
 
   return (
-    <div>
-      <table>
-        <thead>
-          <tr>
-            <th colspan={row}>The table header</th>
-          </tr>
-        </thead>
-        <tbody>
-          {arrayOfrandom.map(col => (
-            <tr>
-              {col.map(row => (
-                <td>{row}</td>
-              ))}
-            </tr>
-          ))}
-        </tbody>
-      </table>
-    </div>
+    <table>
+      <thead>
+        <tr>
+          <th colspan={rows + 1}>The table header</th>
+        </tr>
+      </thead>
+      <tbody>
+        {arrayOfrandom.map(row => <TableElements row={row} />)}
+      </tbody>
+    </table>
   )
 }
