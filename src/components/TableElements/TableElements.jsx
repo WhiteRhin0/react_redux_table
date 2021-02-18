@@ -1,21 +1,22 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
 import './TableElements.css';
 import { TableItem } from '../TableItem';
+
+
 export const TableElements = ({ row }) => {
+  useEffect(() => {}, [row])
 
-  const averageOfRow = (arr) => {
+  const sumOfRow = (arr) => {
     if (arr.length > 0) {
-      const average = arr.reduce((a, b) => a + b) / arr.length;
-
-      return Math.round(average);
+      return arr.reduce((a, b) => a + b);
     }
   };
 
   return (
     <tr className="row">
       {row.map(item => <TableItem item={item} />)}
-      <td className="row__average">{averageOfRow(row)}</td>
+      <td className="row__average">{sumOfRow(row)}</td>
     </tr>
   )
 }

@@ -6,7 +6,6 @@ import { TableElements } from '../TableElements';
 export const Table = ({ rows, columns }) => {
   let arrayOfrandom = createArrayOfRandom(rows, columns);
 
-
   return (
     <table>
       <thead>
@@ -15,7 +14,9 @@ export const Table = ({ rows, columns }) => {
         </tr>
       </thead>
       <tbody>
-        {arrayOfrandom.map(row => <TableElements row={row} />)}
+        {arrayOfrandom.map(row => (
+          <TableElements row={row} />
+        ))}
       </tbody>
     </table>
   )
