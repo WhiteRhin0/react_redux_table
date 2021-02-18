@@ -1,3 +1,5 @@
+ -[DEMO LINK](https://whiterhin0.github.io/react_redux_table/)
+
 Технические условия
 Использовать react + redux
 Входящие параметры
