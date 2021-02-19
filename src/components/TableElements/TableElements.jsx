@@ -5,7 +5,9 @@ import { TableItem } from '../TableItem';
 
 
 export const TableElements = ({ row }) => {
-  const rowWithSum = [...row, sumOfRow(row)]
+  const [rowWithSum, setRowWithSum] = useState([...row, sumOfRow(row)]);
+
+  useEffect(() => {}, [rowWithSum])
 
   function sumOfRow(arr) {
     if (arr.length > 0) {
@@ -15,7 +17,13 @@ export const TableElements = ({ row }) => {
 
   return (
     <tr className="row">
-      {rowWithSum.map(item => <TableItem item={item} />)}
+      {rowWithSum.map(item => (
+        <TableItem
+          item={item}
+          rowWithSum={rowWithSum}
+          setRowWithSum={setRowWithSum}
+        />
+      ))}
     </tr>
   )
 }
