@@ -5,7 +5,7 @@ import { TableItem } from '../TableItem';
 
 
 export const TableElements = ({ row }) => {
-  useEffect(() => {}, [])
+  const rowWithSum = [...row, sumOfRow(row)]
 
   function sumOfRow(arr) {
     if (arr.length > 0) {
@@ -15,8 +15,7 @@ export const TableElements = ({ row }) => {
 
   return (
     <tr className="row">
-      {row.map(item => <TableItem item={item} />)}
-      <td className="row__average">{sumOfRow(row)}</td>
+      {rowWithSum.map(item => <TableItem item={item} />)}
     </tr>
   )
 }
