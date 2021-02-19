@@ -5,9 +5,9 @@ import { TableItem } from '../TableItem';
 
 
 export const TableElements = ({ row }) => {
-  useEffect(() => {}, [row])
+  useEffect(() => {}, [])
 
-  const sumOfRow = (arr) => {
+  function sumOfRow(arr) {
     if (arr.length > 0) {
       return arr.reduce((a, b) => a + b);
     }
