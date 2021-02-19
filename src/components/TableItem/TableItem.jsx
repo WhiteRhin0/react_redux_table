@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 
+import './TableItem.css';
+
 export const TableItem = ({ item }) => {
   const [amount, setAmount] = useState(item);
 
@@ -8,6 +10,11 @@ export const TableItem = ({ item }) => {
   }
 
   return (
-    <td onClick={handleClick}>{amount}</td>
+    <td
+      onClick={handleClick}
+      className="table__item"
+    >
+      {amount}
+    </td>
   )
 }

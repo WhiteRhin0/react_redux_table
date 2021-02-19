@@ -37,6 +37,13 @@ function App() {
         rows={rows}
         columns={columns}
       />
+
+      <button
+        className="button__add-row"
+        onClick={() => setRows(+rows + 1)}
+      >
+        Add row
+      </button>
     </div>
   );
 }

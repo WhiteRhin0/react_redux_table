@@ -1,0 +1,12 @@
+.table__item {
+  margin: 10px;
+  border: 1px solid blueviolet;
+  border-radius: 10px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.table__item:hover {
+  box-sizing: border-box;
+  background: rgba(11, 19, 27, 0.6);
+}

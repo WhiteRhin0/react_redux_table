@@ -1,9 +1,14 @@
-table {
-  padding: 30px;
-  border-collapse: collapse;
-  border: 3px solid purple;
+.table {
+  margin-top: 20px;
+  margin-bottom: 15px;
+  background: #34495E;
+  color: #fff;
+  border-radius: .4em;
+  font-size: 24px;
 }
 
-th, td {
-  padding: 10px;
+tr {
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    border-color: lighten(#34495E, 10%);
 }

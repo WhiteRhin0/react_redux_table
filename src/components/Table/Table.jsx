@@ -4,13 +4,14 @@ import { createArrayOfRandom } from '../../createArrayofRandom';
 import { TableElements } from '../TableElements';
 
 export const Table = ({ rows, columns }) => {
-  let arrayOfrandom = createArrayOfRandom(rows, columns);
+  let arrayOfrandom = createArrayOfRandom(columns, rows);
 
   return (
-    <table>
+    <table className="table">
       <thead>
         <tr>
-          <th colspan={rows + 1}>The table header</th>
+          <th colspan={columns}>The table data</th>
+          <th>Sum</th>
         </tr>
       </thead>
       <tbody>
